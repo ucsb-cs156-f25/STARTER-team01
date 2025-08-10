@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-f25/STARTER-team01
 owner: ucsb-cs156-f25
 repo_name: STARTER-team01
-pull_requests: []
+pull_requests: [{"author":{"id":"MDQ6VXNlcjExMTkwMTc=","is_bot":false,"login":"pconrad","name":"Phill Conrad"},"headRefName":"pc-fix-git-commit-info","number":2,"title":"pc - add configuration needed for git commit info to work","url":"https://github.com/ucsb-cs156-f25/STARTER-team01/pull/2"}]
