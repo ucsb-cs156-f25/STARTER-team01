@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import org.springframework.core.io.ClassPathResource;
 
 import edu.ucsb.cs156.example.services.wiremock.WiremockService;
 import lombok.extern.slf4j.Slf4j;
@@ -55,5 +57,21 @@ public class ExampleApplication {
    */
   public static void main(String[] args) {
     SpringApplication.run(ExampleApplication.class, args);
+  }
+
+  /** 
+   * Pull in git.properties from the classpath, if it exists. 
+   * This is useful for displaying git information in the application.
+   * We use this in the SystemInfoService.
+   * See: https://www.baeldung.com/spring-git-information
+   *  @return a propertySourcePlaceholderConfigurer for git.properties
+   */
+  @Bean
+  public static PropertySourcesPlaceholderConfigurer placeholderConfigurer() {
+    PropertySourcesPlaceholderConfigurer propsConfig = new PropertySourcesPlaceholderConfigurer();
+    propsConfig.setLocation(new ClassPathResource("git.properties"));
+    propsConfig.setIgnoreResourceNotFound(true);
+    propsConfig.setIgnoreUnresolvablePlaceholders(true);
+    return propsConfig;
   }
 }
