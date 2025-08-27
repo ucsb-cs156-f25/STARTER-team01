@@ -1,3 +1,4 @@
+// File: ./src/main/java/edu/ucsb/cs156/example/errors/EntityNotFoundException.java
 package edu.ucsb.cs156.example.errors;
 
 /**

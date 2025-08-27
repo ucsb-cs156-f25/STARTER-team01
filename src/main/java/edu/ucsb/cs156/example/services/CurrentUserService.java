@@ -1,3 +1,4 @@
+// File: ./src/main/java/edu/ucsb/cs156/example/services/CurrentUserService.java
 package edu.ucsb.cs156.example.services;
 
 import edu.ucsb.cs156.example.entities.User;

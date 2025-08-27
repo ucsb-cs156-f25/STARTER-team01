@@ -1,3 +1,4 @@
+// File: ./src/main/java/edu/ucsb/cs156/example/services/GrantedAuthoritiesService.java
 package edu.ucsb.cs156.example.services;
 
 import java.util.Collection;

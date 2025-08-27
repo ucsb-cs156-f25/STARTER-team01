@@ -1,3 +1,4 @@
+// File: ./src/main/java/edu/ucsb/cs156/example/config/SecurityConfig.java
 package edu.ucsb.cs156.example.config;
 
 import edu.ucsb.cs156.example.entities.User;

@@ -1,3 +1,4 @@
+// File: ./src/main/java/edu/ucsb/cs156/example/models/SystemInfo.java
 package edu.ucsb.cs156.example.models;
 
 import lombok.Data;

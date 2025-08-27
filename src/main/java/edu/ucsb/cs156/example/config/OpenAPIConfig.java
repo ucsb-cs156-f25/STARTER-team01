@@ -1,3 +1,4 @@
+// File: ./src/main/java/edu/ucsb/cs156/example/config/OpenAPIConfig.java
 package edu.ucsb.cs156.example.config;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;

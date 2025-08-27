@@ -1,3 +1,4 @@
+// File: ./src/main/java/edu/ucsb/cs156/example/controllers/UserInfoController.java
 package edu.ucsb.cs156.example.controllers;
 
 import edu.ucsb.cs156.example.models.CurrentUser;

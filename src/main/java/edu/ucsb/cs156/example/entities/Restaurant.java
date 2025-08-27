@@ -1,3 +1,4 @@
+// File: ./src/main/java/edu/ucsb/cs156/example/entities/Restaurant.java
 package edu.ucsb.cs156.example.entities;
 
 import jakarta.persistence.Entity;
