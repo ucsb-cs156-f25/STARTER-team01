@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-f25/STARTER-team01
 owner: ucsb-cs156-f25
 repo_name: STARTER-team01
-pull_requests: [{"author":{"is_bot":true,"login":"app/copilot-swe-agent"},"headRefName":"copilot/fix-10","number":11,"title":"[WIP] Create DRAFT PR to test workflow 16","url":"https://github.com/ucsb-cs156-f25/STARTER-team01/pull/11"},{"author":{"is_bot":true,"login":"app/copilot-swe-agent"},"headRefName":"copilot/fix-3","number":4,"title":"Add PMD GitHub Action workflow with graceful no-Java-files handling and centralized workflow integration","url":"https://github.com/ucsb-cs156-f25/STARTER-team01/pull/4"}]
+pull_requests: [{"author":{"is_bot":true,"login":"app/copilot-swe-agent"},"headRefName":"copilot/fix-10","number":11,"title":"Add filename comments to all Java files for PMD workflow testing","url":"https://github.com/ucsb-cs156-f25/STARTER-team01/pull/11"},{"author":{"is_bot":true,"login":"app/copilot-swe-agent"},"headRefName":"copilot/fix-3","number":4,"title":"Add PMD GitHub Action workflow with graceful no-Java-files handling and intelligent conditional execution","url":"https://github.com/ucsb-cs156-f25/STARTER-team01/pull/4"}]
