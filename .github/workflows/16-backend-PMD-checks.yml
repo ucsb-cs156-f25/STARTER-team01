@@ -33,7 +33,7 @@ jobs:
     - name: Compile Java sources
       env:
         TEST_PROPERTIES: ${{ secrets.TEST_PROPERTIES }}
-      run: mvn -B compile
+      run: mvn -B -ntp compile
       
     - name: Run PMD analysis with annotations
       uses: pmd/pmd-github-action@v2
