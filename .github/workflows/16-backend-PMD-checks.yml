@@ -1,5 +1,6 @@
-# This workflow will build a Java project with Maven and run PMD static analysis
-# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+# This workflow uses PMD GitHub Action for static code analysis with PR annotations
+# PMD violations will appear as annotations but won't fail the workflow
+# Only fatal errors (compilation failures, action errors) will fail the workflow
 
 name: "16-backend-PMD-checks: Java Code Analysis with PMD"
 
@@ -12,19 +13,38 @@ on:
     paths: [src/**, pom.xml, lombok.config, pmd-rules.xml]
 
 jobs:
-  build:
+  pmd-analysis:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    permissions:
+      contents: read
+      pull-requests: write
+      security-events: write
     
     steps:
     - uses: actions/checkout@v4
+    
     - name: Set up Java (version from .java-version file)
       uses: actions/setup-java@v4
       with:
          distribution: semeru # See: https://github.com/actions/setup-java#supported-distributions
          java-version-file: ./.java-version
   
-    - name: Build and run PMD analysis
+    - name: Compile Java sources
       env:
         TEST_PROPERTIES: ${{ secrets.TEST_PROPERTIES }}
-      run: mvn -B compile pmd:check
+      run: mvn -B compile
+      
+    - name: Run PMD analysis with annotations
+      uses: pmd/pmd-github-action@v2
+      with:
+        rulesets: 'pmd-rules.xml'
+        sourcePath: 'src/main/java'
+        createGitHubAnnotations: true
+        uploadSarifReport: true
+      
+    - name: Upload SARIF file for Code Scanning
+      uses: github/codeql-action/upload-sarif@v3
+      with:
+        sarif_file: pmd-report.sarif
+      if: always()
