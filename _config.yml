@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-f25/STARTER-team01
 owner: ucsb-cs156-f25
 repo_name: STARTER-team01
-pull_requests: [{"author":{"is_bot":true,"login":"app/copilot-swe-agent"},"headRefName":"copilot/fix-3","number":4,"title":"Add PMD GitHub Action workflow for Java static analysis with PR annotations","url":"https://github.com/ucsb-cs156-f25/STARTER-team01/pull/4"}]
+pull_requests: [{"author":{"is_bot":true,"login":"app/copilot-swe-agent"},"headRefName":"copilot/fix-3","number":4,"title":"Add PMD GitHub Action workflow with graceful no-Java-files handling and centralized workflow integration","url":"https://github.com/ucsb-cs156-f25/STARTER-team01/pull/4"}]
