@@ -1,8 +1,5 @@
 package edu.ucsb.cs156.example.jobs;
 
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-
 import edu.ucsb.cs156.example.services.jobs.JobContext;
 import edu.ucsb.cs156.example.services.jobs.JobContextConsumer;
 import lombok.Builder;
