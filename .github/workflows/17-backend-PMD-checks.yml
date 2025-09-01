@@ -1,0 +1,21 @@
+# This workflow uses PMD GitHub Action for static code analysis with PR annotations
+# PMD violations will appear as annotations but won't fail the workflow
+# Only fatal errors (compilation failures, action errors) will fail the workflow
+
+name: "17-backend-PMD-checks: Java Code Analysis with PMD"
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: [src/**, pom.xml, lombok.config, pmd-rules.xml, .github/workflows/17-backend-PMD-checks.yml]
+  push:
+    branches: [ main ]
+    paths: [src/**, pom.xml, lombok.config, pmd-rules.xml, .github/workflows/17-backend-PMD-checks.yml]
+
+jobs:
+  call-workflow-passing-data:
+    uses: ucsb-cs156/workflows/.github/workflows/17-backend-PMD-checks.yml@main
+    secrets: 
+      TEST_PROPERTIES: ${{ secrets.TEST_PROPERTIES }}
+    with:
+      JAVA_DISTRIBUTION: ${{ vars.JAVA_DISTRIBUTION || 'semeru' }}

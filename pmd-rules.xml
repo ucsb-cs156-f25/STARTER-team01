@@ -6,7 +6,7 @@
                              https://pmd.sourceforge.net/ruleset_2_0_0.xsd">
 
     <description>
-        Custom PMD ruleset for CI/CD workflow 16-backend-PMD-checks.yml.
+        Custom PMD ruleset for CI/CD workflow 17-backend-PMD-checks.yml.
         Focuses on code quality issues related to unused code and potential problems.
         Note: PMD 7.3.0 does not have a direct "commented-out code" rule, so we use
         rules that detect unused imports, variables, and other code quality issues.
