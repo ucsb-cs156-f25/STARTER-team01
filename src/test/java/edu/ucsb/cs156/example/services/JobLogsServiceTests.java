@@ -2,15 +2,19 @@ package edu.ucsb.cs156.example.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
+
+import java.util.Optional;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import edu.ucsb.cs156.example.entities.Job;
 import edu.ucsb.cs156.example.repositories.JobsRepository;
 import edu.ucsb.cs156.example.services.jobs.JobService;
-import java.util.Optional;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.*;
 
 public class JobLogsServiceTests {
 

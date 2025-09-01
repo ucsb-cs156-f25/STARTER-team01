@@ -1,12 +1,13 @@
 package edu.ucsb.cs156.example.services.wiremock;
 
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * This is a dummy service for profiles besides wiremock where we do not want the mocked authentication,

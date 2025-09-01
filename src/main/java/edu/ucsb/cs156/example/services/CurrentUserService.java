@@ -1,12 +1,12 @@
 package edu.ucsb.cs156.example.services;
 
-import edu.ucsb.cs156.example.entities.User;
-import edu.ucsb.cs156.example.models.CurrentUser;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.springframework.security.core.GrantedAuthority;
+
+import edu.ucsb.cs156.example.entities.User;
+import edu.ucsb.cs156.example.models.CurrentUser;
 
 /**
  * This is a service that provides information about the current user.

@@ -1,16 +1,16 @@
 package edu.ucsb.cs156.example.controllers;
 
-import edu.ucsb.cs156.example.errors.EntityNotFoundException;
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.Map;
 
-import edu.ucsb.cs156.example.models.CurrentUser;
-import edu.ucsb.cs156.example.services.CurrentUserService;
-import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import java.util.Map;
+import edu.ucsb.cs156.example.errors.EntityNotFoundException;
+import edu.ucsb.cs156.example.models.CurrentUser;
+import edu.ucsb.cs156.example.services.CurrentUserService;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * This is an abstract class that provides common functionality for all API controllers.

@@ -1,8 +1,10 @@
 package edu.ucsb.cs156.example.services.jobs;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import edu.ucsb.cs156.example.entities.Job;
+
 import org.junit.jupiter.api.Test;
+
+import edu.ucsb.cs156.example.entities.Job;
 
 
 public class JobContextTests {

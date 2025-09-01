@@ -1,8 +1,5 @@
 package edu.ucsb.cs156.example.testconfig;
 
-import edu.ucsb.cs156.example.entities.User;
-import edu.ucsb.cs156.example.services.CurrentUserServiceImpl;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -13,6 +10,9 @@ import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.stereotype.Service;
+
+import edu.ucsb.cs156.example.entities.User;
+import edu.ucsb.cs156.example.services.CurrentUserServiceImpl;
 
 @Service("testingUser")
 public class MockCurrentUserServiceImpl extends CurrentUserServiceImpl {
