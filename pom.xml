@@ -339,6 +339,24 @@
           <commitIdGenerationMode>full</commitIdGenerationMode>
         </configuration>
       </plugin>
+
+      <!-- PMD plugin for static analysis, specifically checking for commented-out code -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>3.25.0</version>
+        <configuration>
+          <inputEncoding>UTF-8</inputEncoding>
+          <targetJdk>21</targetJdk>
+          <rulesets>
+            <!-- Use custom ruleset focused on unused code detection -->
+            <ruleset>pmd-rules.xml</ruleset>
+          </rulesets>
+          <failOnViolation>true</failOnViolation>
+          <linkXRef>false</linkXRef>
+          <includeTests>false</includeTests>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 
