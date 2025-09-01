@@ -15,9 +15,6 @@ public class TestJob implements JobContextConsumer {
 
   @Override
   public void accept(JobContext ctx) throws Exception {
-    // Ensure this is not null
-    Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-
     ctx.log("Hello World! from test job!");
     Thread.sleep(sleepMs);
     if (fail) {
