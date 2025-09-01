@@ -1,9 +1,14 @@
 package edu.ucsb.cs156.example.controllers;
 
-import edu.ucsb.cs156.example.ControllerTestCase;
-import edu.ucsb.cs156.example.entities.User;
-import edu.ucsb.cs156.example.repositories.UserRepository;
-import edu.ucsb.cs156.example.testconfig.TestConfig;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -12,15 +17,10 @@ import org.springframework.context.annotation.Import;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MvcResult;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
-import java.util.ArrayList;
-import java.util.Arrays;
+import edu.ucsb.cs156.example.ControllerTestCase;
+import edu.ucsb.cs156.example.entities.User;
+import edu.ucsb.cs156.example.repositories.UserRepository;
+import edu.ucsb.cs156.example.testconfig.TestConfig;
 
 @WebMvcTest(controllers = UsersController.class)
 @Import(TestConfig.class)

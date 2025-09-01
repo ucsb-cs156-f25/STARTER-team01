@@ -1,22 +1,22 @@
 package edu.ucsb.cs156.example;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.UnsupportedEncodingException;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import edu.ucsb.cs156.example.services.CurrentUserService;
 import edu.ucsb.cs156.example.services.GrantedAuthoritiesService;
 import edu.ucsb.cs156.example.services.wiremock.WiremockService;
 import edu.ucsb.cs156.example.testconfig.TestConfig;
-import org.springframework.test.web.servlet.MvcResult;
-
-import java.io.UnsupportedEncodingException;
-import java.util.Map;
 
 @ActiveProfiles("test")
 @Import(TestConfig.class)

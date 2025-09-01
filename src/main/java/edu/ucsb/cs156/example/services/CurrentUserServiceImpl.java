@@ -1,10 +1,5 @@
 package edu.ucsb.cs156.example.services;
 
-import edu.ucsb.cs156.example.entities.User;
-import edu.ucsb.cs156.example.models.CurrentUser;
-import edu.ucsb.cs156.example.repositories.UserRepository;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -20,6 +15,11 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
+
+import edu.ucsb.cs156.example.entities.User;
+import edu.ucsb.cs156.example.models.CurrentUser;
+import edu.ucsb.cs156.example.repositories.UserRepository;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * This is a service that provides information about the current user.

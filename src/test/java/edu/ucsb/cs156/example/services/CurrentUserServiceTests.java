@@ -6,10 +6,10 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.Test;
+import org.mockito.Answers;
 
 import edu.ucsb.cs156.example.ControllerTestCase;
 import edu.ucsb.cs156.example.entities.User;
-import org.mockito.Answers;
 
 class CurrentUserServiceTests extends ControllerTestCase {
 

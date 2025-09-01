@@ -1,10 +1,11 @@
 package edu.ucsb.cs156.example.services;
 
-import edu.ucsb.cs156.example.models.SystemInfo;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Service;
+
+import edu.ucsb.cs156.example.models.SystemInfo;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * This is a service for getting information about the system.
