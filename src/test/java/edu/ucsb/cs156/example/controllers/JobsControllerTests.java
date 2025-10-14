@@ -17,11 +17,18 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import edu.ucsb.cs156.example.ControllerTestCase;
+import edu.ucsb.cs156.example.entities.Job;
+import edu.ucsb.cs156.example.entities.User;
+import edu.ucsb.cs156.example.repositories.JobsRepository;
+import edu.ucsb.cs156.example.repositories.UserRepository;
+import edu.ucsb.cs156.example.services.jobs.JobService;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Optional;
-
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureDataJpa;
@@ -30,16 +37,6 @@ import org.springframework.context.annotation.Import;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MvcResult;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import edu.ucsb.cs156.example.ControllerTestCase;
-import edu.ucsb.cs156.example.entities.Job;
-import edu.ucsb.cs156.example.entities.User;
-import edu.ucsb.cs156.example.repositories.JobsRepository;
-import edu.ucsb.cs156.example.repositories.UserRepository;
-import edu.ucsb.cs156.example.services.jobs.JobService;
-import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @WebMvcTest(controllers = JobsController.class)
@@ -328,5 +325,4 @@ public class JobsControllerTests extends ControllerTestCase {
         .atMost(10, SECONDS)
         .untilAsserted(() -> verify(jobsRepository, times(3)).save(eq(jobFailed)));
   }
-
 }

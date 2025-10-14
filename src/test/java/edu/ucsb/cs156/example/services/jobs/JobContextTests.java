@@ -2,10 +2,8 @@ package edu.ucsb.cs156.example.services.jobs;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.Test;
-
 import edu.ucsb.cs156.example.entities.Job;
-
+import org.junit.jupiter.api.Test;
 
 public class JobContextTests {
   @Test
@@ -22,5 +20,4 @@ public class JobContextTests {
     // assert
     assertEquals("This is a log message", job1.getLog());
   }
-
 }

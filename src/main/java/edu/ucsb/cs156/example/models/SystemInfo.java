@@ -8,10 +8,9 @@ import lombok.NoArgsConstructor;
 
 /**
  * This is a model class that represents system information.
- * 
- * This class is used to provide information about the system to the frontend.
+ *
+ * <p>This class is used to provide information about the system to the frontend.
  */
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
