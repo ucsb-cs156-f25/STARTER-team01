@@ -1,8 +1,5 @@
 package edu.ucsb.cs156.example.jobs;
 
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-
 import edu.ucsb.cs156.example.services.jobs.JobContext;
 import edu.ucsb.cs156.example.services.jobs.JobContextConsumer;
 import lombok.Builder;
@@ -15,9 +12,6 @@ public class TestJob implements JobContextConsumer {
 
   @Override
   public void accept(JobContext ctx) throws Exception {
-    // Ensure this is not null
-    Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-
     ctx.log("Hello World! from test job!");
     Thread.sleep(sleepMs);
     if (fail) {
