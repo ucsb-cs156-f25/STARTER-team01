@@ -14,7 +14,7 @@ on:
 
 jobs:
   call-workflow-passing-data:
-    uses: ucsb-cs156/workflows/.github/workflows/10-backend-unit.yml@main
+    uses: ucsb-cs156/workflows/.github/workflows/10-backend-unit.yml@dj-remove-id-token
     secrets: 
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
     with:
