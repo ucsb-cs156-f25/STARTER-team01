@@ -3,8 +3,6 @@
 import edu.ucsb.cs156.example.services.jobs.JobContext;
 import edu.ucsb.cs156.example.services.jobs.JobContextConsumer;
 import lombok.Builder;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 
 @Builder
 public class TestJob implements JobContextConsumer {
@@ -14,15 +12,12 @@ public class TestJob implements JobContextConsumer {
 
   @Override
   public void accept(JobContext ctx) throws Exception {
-    // Ensure this is not null
-<span class="fc" id="L18">    Authentication authentication = SecurityContextHolder.getContext().getAuthentication();</span>
-
-<span class="fc" id="L20">    ctx.log(&quot;Hello World! from test job!&quot;);</span>
-<span class="fc" id="L21">    Thread.sleep(sleepMs);</span>
-<span class="fc bfc" id="L22" title="All 2 branches covered.">    if (fail) {</span>
-<span class="fc" id="L23">      throw new Exception(&quot;Fail!&quot;);</span>
+<span class="fc" id="L15">    ctx.log(&quot;Hello World! from test job!&quot;);</span>
+<span class="fc" id="L16">    Thread.sleep(sleepMs);</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">    if (fail) {</span>
+<span class="fc" id="L18">      throw new Exception(&quot;Fail!&quot;);</span>
     }
-<span class="fc" id="L25">    ctx.log(&quot;Goodbye from test job!&quot;);</span>
-<span class="fc" id="L26">  }</span>
+<span class="fc" id="L20">    ctx.log(&quot;Goodbye from test job!&quot;);</span>
+<span class="fc" id="L21">  }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
