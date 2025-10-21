@@ -16,7 +16,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
                 """
     <p><a href='/'>Home Page</a></p>
     <p><a href='/h2-console'>H2 Console (only on localhost)</a></p>
-    <p><a href='/login'>login</a></p>
+    <p><a href='/oauth2/authorization/google'>login</a></p>
     <p><a href='/logout'>logout</a></p>
     """),
     servers = @Server(url = "/"))
