@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-f25/STARTER-team01
 owner: ucsb-cs156-f25
 repo_name: STARTER-team01
-pull_requests: [{"author":{"id":"MDQ6VXNlcjExMTkwMTc=","is_bot":false,"login":"pconrad","name":"Phill Conrad"},"headRefName":"pc-dj-TestJob-formatting","number":23,"title":"dj - fixed formatting on TestJob.java","url":"https://github.com/ucsb-cs156-f25/STARTER-team01/pull/23"},{"author":{"is_bot":true,"login":"app/copilot-swe-agent"},"headRefName":"copilot/add-restore-16-backend-pmd-checks","number":22,"title":"Restore 16-backend-PMD-checks workflow (placeholder)","url":"https://github.com/ucsb-cs156-f25/STARTER-team01/pull/22"}]
+pull_requests: []
